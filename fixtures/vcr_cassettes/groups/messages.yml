@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://slack.com/api/groups.history
+    body:
+      encoding: UTF-8
+      string: channel=G08CT1V6V&token=xoxp-6640171794-6641242375-17575672401-a775425ec2
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Slack Ruby Client/0.5.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Security-Policy:
+      - referrer no-referrer;
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 01 Jan 2016 17:31:38 GMT
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - groups:history,read
+      X-Content-Type-Options:
+      - nosniff
+      X-Oauth-Scopes:
+      - identify,read,post,client
+      X-Xss-Protection:
+      - '0'
+      Content-Length:
+      - '1347'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":true,"messages":[{"type":"message","user":"U06JU8V6Z","text":"\u041d\u0435
+        \u0441\u0438\u043b\u044c\u043d\u043e \u043f\u0440\u0438\u043a\u043e\u043b\u044c\u043d\u043e,
+        \u0447\u0442\u043e \u0443 \u0431\u0430\u0441\u0430 \u0442\u0430\u043a\u0430\u044f
+        \u0441\u0442\u0430\u0442\u0438\u0447\u043d\u0430\u044f \u0430\u043c\u043f\u043b\u0438\u0442\u0443\u0434\u0430,
+        \u043d\u0435\u0442 \u0437\u0430\u0442\u0443\u0445\u0430\u043d\u0438\u044f
+        \u0438 \u043d\u0430\u0440\u0430\u0441\u0442\u0430\u043d\u0438\u044f, \u0438
+        \u0437\u0432\u0443\u043a \u0432\u044b\u0445\u043e\u0434\u0438\u0442 \u043d\u0435\u043c\u043d\u043e\u0433\u043e
+        \u043e\u0434\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u043d\u044b\u043c","ts":"1441696846.000005"},{"type":"message","user":"U06JU8V6Z","text":"\u041d\u0435\u043c\u043d\u043e\u0433\u043e
+        \u0440\u043e\u043a\u043e\u0432\u044b\u0439 \u0431\u0430\u0441","ts":"1441696439.000004"},{"type":"message","user":"U06JV5XFU","text":"\u0410\u043b\u0435
+        \u043a\u0456\u043d\u0435\u0446\u044c \u043c\u0435\u043d\u0456 \u043d\u0435
+        \u0434\u0443\u0436\u0435","ts":"1441665229.000003"},{"type":"message","user":"U06JV5XFU","text":"3.8
+        \u0431\u0456\u043b\u044c\u0448\u0435 \u0441\u043f\u043e\u0434\u043e\u0431\u0430\u0432\u0441\u044f
+        \u0432 \u043f\u043b\u0430\u043d\u0456 \u0431\u0430\u0441\u0443","ts":"1441665206.000002"},{"type":"message","user":"U06JV74B1","text":"\u0432
+        3-8, \u0447\u0443\u0442\u043e\u043a \u0434\u0440\u0443\u0433\u043e\u0439 \u043a\u043e\u043d\u0435\u0446,
+        \u043a\u0430\u043a \u0438\u0434\u0435\u044f","ts":"1441643197.000003"},{"type":"message","user":"U06JV74B1","text":"\u043f\u043e\u0434\u043f\u0440\u0430\u0432\u0438\u043b
+        3-7a.mp3\/wav","ts":"1441642206.000002"},{"type":"message","user":"U06JV74B1","text":"\u0443\u0433\u0443","ts":"1441625377.000003"},{"type":"message","user":"U06JU8V6Z","text":"\u041f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u044e
+        \u043f\u043e\u043c\u0435\u043d\u044f\u0442\u044c \u0437\u0432\u0443\u043a
+        \u0431\u0430\u0441\u0430 \u043d\u0430 \u0441 \u0431\u043e\u043b\u0435\u0435
+        \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u043d\u043e\u0439 \u0430\u0442\u0430\u043a\u043e\u0439,
+        \u0438 \u0441\u0434\u0435\u043b\u0430\u0442\u044c \u0435\u0433\u043e \u043f\u043e\u0442\u0438\u0448\u0435
+        \u043a\u043e\u043d\u043a\u0440\u0435\u0442\u043d\u043e","ts":"1441625162.000002"},{"type":"message","user":"U06JV74B1","text":"\u0411\u0430\u0441
+        \u0432 3-7.rsn, \u0431\u0430\u0443\u043d\u0441 \u0432 !mp3","ts":"1441566686.000002"},{"type":"message","user":"U06JU8V6Z","text":"\u041a\u0440\u0443\u0442\u043e!))","ts":"1439980676.000002"},{"type":"message","user":"U06JV74B1","text":"\u041f\u0435\u0440\u0435\u0441\u043e\u0431\u0440\u0430\u043b
+        \u043f\u0440\u043e\u0435\u043a\u0442, \u043d\u0430 \u044d\u0442\u043e\u0442
+        \u0440\u0430\u0437 223.9 MB, \u0432\u043c\u0435\u0441\u0442\u043e 1,5 \u0433\u0438\u0433\u0430))))","ts":"1439939053.000002"},{"type":"message","user":"U06JU8V6Z","text":"\u041d\u0435\u043e\u0436\u0438\u0434\u0430\u043d\u043d\u043e
+        \u043b\u043e\u043c\u0430\u043d\u043e \u043d\u043e \u0437\u0430\u0447\u0435\u0442\u043d\u043e!","ts":"1439450614.000003"},{"type":"message","user":"U06JU8V6Z","text":"\u041f\u043e
+        \u043c\u043e\u0435\u043c\u0443 \u044d\u0442\u043e \u043f\u0440\u0438\u043a\u043e\u043b\u044c\u043d\u043e!","ts":"1439450587.000002"},{"type":"message","user":"U06JV74B1","text":"<!group>:  \u041d\u043e\u0432\u0430\u044f
+        \u0432\u0435\u0440\u0441\u0438\u044f (3-7) \u0432 !mp3","ts":"1439334747.000002"},{"type":"message","user":"U06JU8V6Z","text":"<@U06JV74B1>
+        \u0431\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u043e\u0447\u043a\u0430\n","ts":"1439233785.000002"},{"type":"message","user":"U06JV74B1","text":"<@U06JU8V6Z>:
+        \u043f\u043e\u0447\u0438\u0449\u0443","ts":"1439204249.000002"},{"type":"message","user":"U06JU8V6Z","text":"\u041f\u0430\u0440\u043d\u0438!
+        \u0412 \u043f\u0430\u043f\u043a\u0435 3 \u043b\u0435\u0436\u0438\u0442 \u043f\u0440\u043e\u0435\u043a\u0442
+        \u043b\u043e\u0434\u0436\u0438\u043a\u0430 tsma 1,5 \u0433\u0438\u0433\u0430.
+        \u042d\u0442\u043e \u043d\u0435\u0440\u0435\u0430\u043b\u044c\u043d\u044b\u0435
+        \u0440\u0430\u0437\u043c\u0435\u0440\u044b! \u041f\u043e\u0431\u043e\u0439\u0442\u0435\u0441\u044c
+        \u0411\u043e\u0433\u0430! )","ts":"1438535933.000002"},{"type":"message","subtype":"pinned_item","user":"U06JV74B1","item_type":"G","attachments":[{"color":"D0D0D0","fallback":"[July
+        30th, 2015 8:12 PM] dorialan: \u0431\u0430\u0441\u0441, \u0434\u043e\u0447\u0438\u0441\u0442\u0438\u0442\u044c
+        :guitar: ","author_subname":"dorialan","ts":"1438276368.000005","text":"\u0431\u0430\u0441\u0441,
+        \u0434\u043e\u0447\u0438\u0441\u0442\u0438\u0442\u044c :guitar: ","author_link":"https:\/\/2sleepy.slack.com\/team\/dorialan","author_icon":"https:\/\/avatars.slack-edge.com\/2015-06-20\/6641445284_56a21c336a5c51e283de_48.jpg","mrkdwn_in":["text"]}],"text":"<@U06JV74B1|dorialan>
+        pinned a message to this channel.","ts":"1438276403.000007"},{"type":"message","user":"U06JV74B1","text":"\u0431\u0430\u0441\u0441,
+        \u0434\u043e\u0447\u0438\u0441\u0442\u0438\u0442\u044c :guitar: ","edited":{"user":"U06JV74B1","ts":"1438276396.000000"},"ts":"1438276368.000005","pinned_to":["G08CT1V6V"]},{"user":"U06JV74B1","inviter":"U06JU8V6Z","type":"message","subtype":"group_join","text":"<@U06JV74B1|dorialan>
+        has joined the group","ts":"1438276184.000004"},{"user":"U06JV5XFU","inviter":"U06JU8V6Z","type":"message","subtype":"group_join","text":"<@U06JV5XFU|andriy>
+        has joined the group","ts":"1438276184.000003"},{"user":"U06JU8V6Z","type":"message","subtype":"group_join","text":"<@U06JU8V6Z|seva>
+        has joined the group","ts":"1438276183.000002"}],"has_more":false}'
+    http_version: 
+  recorded_at: Fri, 01 Jan 2016 17:31:38 GMT
+recorded_with: VCR 3.0.1

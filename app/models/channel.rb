@@ -1,2 +1,3 @@
-class Channel < ActiveRecord::Base
+class Channel < Messageable
+  has_many :messages, as: :messageable
 end

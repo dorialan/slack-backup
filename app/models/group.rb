@@ -1,4 +1,3 @@
-class Group < ActiveRecord::Base
-  validates :name, presence: true
-  validates :external_id, presence: true, uniqueness: true
+class Group < Messageable
+  has_many :messages, as: :messageable
 end

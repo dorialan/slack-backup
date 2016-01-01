@@ -38,10 +38,13 @@ gem 'slack-ruby-client'
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.4'
-  gem 'rspec-collection_matchers'
+end
+
+group :test do
   gem 'vcr'
   gem 'webmock'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'rspec-collection_matchers'
 end
 
 group :development do

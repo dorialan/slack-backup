@@ -1,8 +1,9 @@
-module SlackImport
-  class Group
-    def self.call
-      @client ||= Slack::Web::Client.new
-      groups = @client.groups_list.fetch("groups") { [] }
+module SlackServices
+  module GroupsImporter
+    extend Client
+
+    def import
+      groups = client.groups_list.fetch("groups") { [] }
       groups.each do |group_attributes|
         topic = group_attributes.fetch("topic", {})
         purpose = group_attributes.fetch("purpose", {})
@@ -14,5 +15,7 @@ module SlackImport
         end
       end
     end
+
+    module_function :import
   end
 end

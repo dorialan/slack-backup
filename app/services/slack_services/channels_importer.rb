@@ -1,8 +1,9 @@
-module SlackImport
-  class Channel
-    def self.call
-      @client ||= Slack::Web::Client.new
-      channels = @client.channels_list.fetch("channels") { [] }
+module SlackServices
+  module ChannelsImporter
+    extend Client
+
+    def import
+      channels = client.channels_list.fetch("channels") { [] }
       channels.each do |channel_attributes|
         topic = channel_attributes.fetch("topic", {})
         purpose = channel_attributes.fetch("purpose", {})
@@ -14,5 +15,7 @@ module SlackImport
         end
       end
     end
+
+    module_function :import
   end
 end
