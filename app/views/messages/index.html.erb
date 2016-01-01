@@ -1,0 +1,14 @@
+<div class="row col-md-4">
+  <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+    <div class="card-block">
+      <h3 class="card-title">Channels</h3>
+      <%= render @messageables %>
+    </div>
+  </div>
+</div>
+<div class="row col-md-1">&nbsp;</div>
+<div class="row col-md-7">
+
+  <div class=""><%= render @messages %></div>
+  <%= paginate @messages %>
+</div>

@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'bootstrap';
+
+.img-thumbnail {
+  height: 50px;
+  width: 50px;
+}
+
+.card-inverse {
+  color: limegreen;
+}
+
+a {
+  color: #818a91;
+}

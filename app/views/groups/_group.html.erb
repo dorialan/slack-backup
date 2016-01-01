@@ -1,0 +1,8 @@
+<div>
+  <span>&bull;</span>
+  <% if current_page?(messageable_messages_path(group)) %>
+    <span><%= group.name %></span>
+  <% else %>
+    <%= link_to group.name, messageable_messages_path(group), class: 'card-link' %>
+  <% end %>
+</div>
