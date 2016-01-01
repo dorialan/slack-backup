@@ -32,9 +32,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# A Ruby and command-line client for the Slack Web and Real Time Messaging APIs.
+gem 'slack-ruby-client'
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
-  gem 'debugger'
+  gem 'byebug'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'rspec-collection_matchers'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
