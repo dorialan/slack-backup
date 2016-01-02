@@ -1,4 +1,8 @@
 <div>
   <span>#</span>
-  <%= link_to channel.name, messageable_messages_path(channel), class: 'card-link' %>
+  <% if current_page?(messageable_messages_path(channel)) %>
+      <span><%= channel.name %></span>
+  <% else %>
+      <%= link_to channel.name, messageable_messages_path(channel), class: 'card-link' %>
+  <% end %>
 </div>
