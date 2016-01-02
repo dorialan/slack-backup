@@ -38,6 +38,8 @@ gem 'gemoji'
 # A Ruby and command-line client for the Slack Web and Real Time Messaging APIs.
 gem 'slack-ruby-client'
 
+gem 'newrelic_rpm'
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
