@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :get_messageable, only: :index
 
   def index
-    @messages = @messageable.messages.page params[:page]
+    @messages = @messageable.messages.order(posted_at: :desc).page params[:page]
     @messageables = Messageable.all
   end
 

@@ -3,20 +3,21 @@ module SlackServices
     extend Client
 
     def import
-      users = client.users_list.fetch("members") { [] }
+      users = client.users_list.fetch('members') { [] }
       users.each do |user_attributes|
-        profile = user_attributes.fetch("profile", {})
-        if user = ::User.where(external_id: user_attributes["id"]).first_or_initialize
-          user.name = user_attributes.fetch("name", "Noname")
-          user.image_url = profile["image_72"]
-          user.real_name = profile["real_name"]
-          user.save!
-        else
-          raise user.errors.full_messages
-        end
+        import_user(user_attributes) rescue Rails.logger.error($!.message)
       end
     end
 
-    module_function :import
+    def import_user(user_attributes)
+      profile = user_attributes.fetch('profile', {})
+      user = ::User.where(external_id: user_attributes['id']).first_or_initialize
+      user.name = user_attributes.fetch('name', 'Noname')
+      user.image_url = profile['image_72']
+      user.real_name = profile['real_name']
+      user.save!
+    end
+
+    module_function :import, :import_user
   end
 end

@@ -1,16 +1,16 @@
 namespace :slack do
-  desc "Import users, groups, channels and messages from Slack"
+  desc 'Import users, groups, channels and messages from Slack'
   task import: :environment do
-    Rails.logger.info "Importing users"
+    Rails.logger.info 'Importing users'
     SlackServices::UsersImporter.import
 
-    Rails.logger.info "Importing groups"
+    Rails.logger.info 'Importing groups'
     SlackServices::GroupsImporter.import
 
-    Rails.logger.info "Importing channels"
+    Rails.logger.info 'Importing channels'
     SlackServices::ChannelsImporter.import
 
-    Rails.logger.info "Importing messages"
+    Rails.logger.info 'Importing messages'
     Group.all.each do |group|
       SlackServices::GroupMessagesImporter.new(group).import
     end
@@ -19,7 +19,30 @@ namespace :slack do
       SlackServices::ChannelMessagesImporter.new(channel).import
     end
 
-    Rails.logger.info "Done Slack importing!"
+    Rails.logger.info 'Done Slack importing!'
+  end
+
+  desc 'Import users, groups, channels and messages from Slack'
+  task deep_import: :environment do
+    Rails.logger.info 'Importing users'
+    SlackServices::UsersImporter.import
+
+    Rails.logger.info 'Importing groups'
+    SlackServices::GroupsImporter.import
+
+    Rails.logger.info 'Importing channels'
+    SlackServices::ChannelsImporter.import
+
+    Rails.logger.info 'Importing messages'
+    Group.all.each do |group|
+      SlackServices::GroupMessagesImporter.new(group).import(deep: true)
+    end
+
+    Channel.all.each do |channel|
+      SlackServices::ChannelMessagesImporter.new(channel).import(deep: true)
+    end
+
+    Rails.logger.info 'Done Slack deep importing!'
   end
 
 end

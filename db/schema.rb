@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160101145856) do
+ActiveRecord::Schema.define(version: 20160102114833) do
 
   create_table "messageables", force: :cascade do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160101145856) do
     t.integer  "messageable_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.datetime "posted_at"
   end
 
   add_index "messages", ["external_id"], name: "index_messages_on_external_id"
