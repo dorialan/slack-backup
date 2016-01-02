@@ -22,7 +22,7 @@ module ApplicationHelper
         if slackname.count == 2
           name = slackname.last
         else
-          users = User.pluck(:external_id, :name).to_h
+          users = Hash[User.pluck(:external_id, :name)]
           name = users.fetch($1, "Noname")
         end
         %(<span class="media-heading label label-warning">#{name}</span>)
