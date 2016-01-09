@@ -44,5 +44,4 @@ namespace :slack do
 
     Rails.logger.info 'Done Slack deep importing!'
   end
-
 end

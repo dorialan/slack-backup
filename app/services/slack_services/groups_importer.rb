@@ -5,14 +5,18 @@ module SlackServices
     def import
       groups = client.groups_list.fetch('groups') { [] }
       groups.each do |group_attributes|
-        import_group(group_attributes) rescue Rails.logger.error($!.message)
+        begin
+          import_group(group_attributes)
+        rescue => ex
+          Rails.logger.error(ex.message)
+        end
       end
     end
 
     def import_group(group_attributes)
-      external_id = group_attributes.fetch('id') {
-        raise 'Channel has no ID!'
-      }
+      external_id = group_attributes.fetch('id') do
+        fail 'Channel has no ID!'
+      end
       topic = group_attributes.fetch('topic', {})
       purpose = group_attributes.fetch('purpose', {})
 
